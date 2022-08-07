@@ -1,0 +1,5 @@
+plugin/
+temp.vim
+undo/
+.DS_Store
+!after/plugin
