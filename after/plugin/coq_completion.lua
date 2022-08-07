@@ -1,2 +1,3 @@
+
 vim.cmd([[COQnow -s]])
 

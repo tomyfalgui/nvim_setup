@@ -11,6 +11,7 @@ return require('packer').startup(function(use)
     'ms-jpq/coq_nvim',
     branch = 'coq'
   } -- completion
+  use { 'mhartington/formatter.nvim' } -- formatting
 
   use {
     'ms-jpq/coq.artifacts',
