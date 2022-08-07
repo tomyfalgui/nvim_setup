@@ -49,5 +49,4 @@ require'nvim-treesitter.configs'.setup {
   }
 }
 
--- treesitter colorizer
 
