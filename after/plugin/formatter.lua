@@ -42,6 +42,24 @@ require("formatter").setup({
 		rust = {
 			require("formatter.filetypes.rust").rustfmt,
 		},
+
+		svelte = {
+			require("formatter.filetypes.svelte").prettier,
+		},
+
+		typescript = {
+			require("formatter.filetypes.javascript").prettier,
+		},
+		javascript = {
+			require("formatter.filetypes.javascript").prettier,
+		},
+		css = {
+			require("formatter.filetypes.css").prettier,
+		},
+
+		html = {
+			require("formatter.filetypes.html").prettier,
+		},
 	},
 })
 
