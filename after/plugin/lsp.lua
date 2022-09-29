@@ -14,6 +14,7 @@ require("lspconfig").html.setup({
 })
 
 require("lspconfig").emmet_ls.setup({})
+require("lspconfig").gopls.setup({})
 
 require("lspconfig").jsonls.setup({
 	capabilities = capabilities,

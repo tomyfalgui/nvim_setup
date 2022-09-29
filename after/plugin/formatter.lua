@@ -60,6 +60,12 @@ require("formatter").setup({
 		html = {
 			require("formatter.filetypes.html").prettier,
 		},
+
+		go = {
+			require("formatter.filetypes.go").gofumpt,
+			require("formatter.filetypes.go").goimports,
+			require("formatter.filetypes.go").golines,
+		},
 	},
 })
 
