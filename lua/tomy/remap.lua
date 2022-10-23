@@ -26,3 +26,5 @@ nnoremap("<leader>vh", function()
 	telescope.help_tags()
 	return "\n"
 end)
+
+nnoremap("<space>e", "<cmd>lua vim.diagnostic.open_float()<CR>")

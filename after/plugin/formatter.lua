@@ -50,6 +50,12 @@ require("formatter").setup({
 		typescript = {
 			require("formatter.filetypes.javascript").prettier,
 		},
+		typescriptreact = {
+			require("formatter.filetypes.typescriptreact").prettier,
+		},
+		javascriptreact = {
+			require("formatter.filetypes.javascriptreact").prettier,
+		},
 		javascript = {
 			require("formatter.filetypes.javascript").prettier,
 		},
@@ -65,6 +71,10 @@ require("formatter").setup({
 			require("formatter.filetypes.go").gofumpt,
 			require("formatter.filetypes.go").goimports,
 			require("formatter.filetypes.go").golines,
+		},
+
+		elixir = {
+			require("formatter.filetypes.elixir").mixformat,
 		},
 	},
 })

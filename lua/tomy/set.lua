@@ -18,6 +18,7 @@ vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.undodir = vim.fn.stdpath("config") .. "/undo"
 vim.opt.undofile = true
+vim.opt.foldenable = false
 
 vim.opt.scrolloff = 8
 
