@@ -1,6 +1,19 @@
 -- Utilities for creating configurations
 local util = require("formatter.util")
 
+function rome()
+	return {
+		exe = "rome",
+		args = {
+			"format",
+			"--write",
+			"--stdin-file-path",
+			util.escape_path(util.get_current_buffer_file_path()),
+		},
+		stdin = true,
+	}
+end
+
 -- Provides the Format, FormatWrite, FormatLock, and FormatWriteLock commands
 require("formatter").setup({
 	-- Enable or disable logging
@@ -48,16 +61,16 @@ require("formatter").setup({
 		},
 
 		typescript = {
-			require("formatter.filetypes.javascript").prettier,
+			rome,
 		},
 		typescriptreact = {
-			require("formatter.filetypes.typescriptreact").prettier,
+			rome,
 		},
 		javascriptreact = {
-			require("formatter.filetypes.javascriptreact").prettier,
+			rome,
 		},
 		javascript = {
-			require("formatter.filetypes.javascript").prettier,
+			rome,
 		},
 		css = {
 			require("formatter.filetypes.css").prettier,

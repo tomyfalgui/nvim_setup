@@ -21,3 +21,6 @@ require("lspconfig").jsonls.setup({
 })
 
 require("lspconfig").tsserver.setup({})
+require("lspconfig").elixirls.setup({
+	cmd = { "/Users/tomy/.local/bin/elixir-ls/language_server.sh" },
+})
