@@ -1,6 +1,7 @@
 local nnoremap = require("tomy.keymap").nnoremap
 local inoremap = require("tomy.keymap").inoremap
 local telescope = require("telescope.builtin")
+local diag = vim.diagnostic
 
 nnoremap("<leader>pv", "<cmd>Ex<CR>")
 inoremap("jk", "<ESC>")
@@ -26,5 +27,3 @@ nnoremap("<leader>vh", function()
 	telescope.help_tags()
 	return "\n"
 end)
-
-nnoremap("<space>e", "<cmd>lua vim.diagnostic.open_float()<CR>")
