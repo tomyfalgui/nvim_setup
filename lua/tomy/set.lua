@@ -29,3 +29,10 @@ vim.opt.signcolumn = "yes"
 vim.opt.colorcolumn = "80"
 
 vim.g.mapleader = " "
+
+-- set diagnostics
+vim.diagnostic.config({
+	virtual_text = false,
+	signs = true,
+	float = { border = "single" },
+})

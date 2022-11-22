@@ -54,6 +54,7 @@ return require("packer").startup(function(use)
 		run = function()
 			require("nvim-treesitter.install").update({ with_sync = true })
 		end,
+		commit = "fd4525fd9e61950520cea4737abc1800ad4aabb",
 	})
 	use("p00f/nvim-ts-rainbow") -- bracket rainbows
 
