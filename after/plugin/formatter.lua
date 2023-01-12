@@ -89,6 +89,10 @@ require("formatter").setup({
 		elixir = {
 			require("formatter.filetypes.elixir").mixformat,
 		},
+
+		python = {
+			require("formatter.filetypes.python").black,
+		},
 	},
 })
 
