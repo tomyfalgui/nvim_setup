@@ -93,6 +93,10 @@ require("formatter").setup({
 		python = {
 			require("formatter.filetypes.python").black,
 		},
+
+		scala = {
+			vim.lsp.buf.formatting,
+		},
 	},
 })
 
