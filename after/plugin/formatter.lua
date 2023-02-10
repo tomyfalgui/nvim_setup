@@ -1,6 +1,21 @@
 -- Utilities for creating configurations
 local util = require("formatter.util")
 
+function scalafmt()
+	vim.lsp.buf.format({ async = true })
+end
+
+function purescriptTidy()
+	return {
+		exe = "purs-tidy",
+		args = {
+			"format-in-place",
+			util.escape_path(util.get_current_buffer_file_path()),
+		},
+		stdin = true,
+	}
+end
+
 function rome()
 	return {
 		exe = "rome",
@@ -95,7 +110,14 @@ require("formatter").setup({
 		},
 
 		scala = {
-			vim.lsp.buf.formatting,
+			scalafmt,
+		},
+
+		purescript = {
+			purescriptTidy,
+		},
+		purs = {
+			purescriptTidy,
 		},
 	},
 })
