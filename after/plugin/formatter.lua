@@ -9,7 +9,8 @@ function purescriptTidy()
 	return {
 		exe = "purs-tidy",
 		args = {
-			"format-in-place",
+			"format",
+			"<",
 			util.escape_path(util.get_current_buffer_file_path()),
 		},
 		stdin = true,
