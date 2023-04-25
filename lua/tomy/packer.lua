@@ -48,19 +48,10 @@ return require("packer").startup(function(use)
 		end,
 	})
 
-	-- treesitter
-	use({
-		"nvim-treesitter/nvim-treesitter",
-		run = function()
-			require("nvim-treesitter.install").update({ with_sync = true })
-		end,
-		commit = "fd4525fd9e61950520cea4737abc1800ad4aabb",
-	})
-	use("p00f/nvim-ts-rainbow") -- bracket rainbows
-
 	-- go nvim plugin
 	use("ray-x/go.nvim")
 	use("ray-x/guihua.lua") -- recommanded if need floating window support
+	use("p00f/nvim-ts-rainbow") -- bracket rainbows
 
 	use({
 		"numToStr/Comment.nvim",
@@ -73,4 +64,19 @@ return require("packer").startup(function(use)
 
 	use({ "scalameta/nvim-metals", requires = { "nvim-lua/plenary.nvim" } })
 	use("purescript-contrib/purescript-vim")
+	use({
+		"ellisonleao/glow.nvim",
+		config = function()
+			require("glow").setup()
+		end,
+	})
+
+	-- treesitter
+	use({
+		"nvim-treesitter/nvim-treesitter",
+		run = function()
+			require("nvim-treesitter.install").update({ with_sync = true })
+		end,
+		commit = "fd4525fd9e61950520cea4737abc1800ad4aabb",
+	})
 end)

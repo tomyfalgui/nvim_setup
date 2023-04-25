@@ -96,12 +96,6 @@ require("formatter").setup({
 			require("formatter.filetypes.html").prettier,
 		},
 
-		go = {
-			require("formatter.filetypes.go").gofumpt,
-			require("formatter.filetypes.go").goimports,
-			require("formatter.filetypes.go").golines,
-		},
-
 		elixir = {
 			require("formatter.filetypes.elixir").mixformat,
 		},
